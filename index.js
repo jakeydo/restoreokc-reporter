@@ -23,6 +23,6 @@ function signatureForRequest(verb, address, body){
   var stringToSign = "" + unixTime + verb + address + body;
   hmac.update(stringToSign);
   var signature = encodeURIComponent(hmac.digest('base64'));
-  
+  console.log('String to sign: ' + stringToSign);
   return signature;
 }
