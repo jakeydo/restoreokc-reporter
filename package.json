@@ -1,0 +1,29 @@
+{
+  "name": "restoreokc-reporter",
+  "version": "1.0.0",
+  "description": "Restore OKC Report Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeydo/restoreokc-reporter.git"
+  },
+  "keywords": [
+    "restore",
+    "okc",
+    "restoreokc",
+    "thecity"
+  ],
+  "author": "Jake Spencer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakeydo/restoreokc-reporter/issues"
+  },
+  "homepage": "https://github.com/jakeydo/restoreokc-reporter#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "hmac": "^1.0.1"
+  }
+}
