@@ -22,7 +22,7 @@ function signatureForRequest(verb, address, body){
   unixTime = 1474550892;
   var stringToSign = "" + unixTime + verb + address + body;
   hmac.update(stringToSign);
-  let signature = toUrlSafe(hmac.digest('base64'));
+  var signature = toUrlSafe(hmac.digest('base64'));
   
   return signature;
 }
