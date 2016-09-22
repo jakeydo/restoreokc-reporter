@@ -5,7 +5,6 @@ var port = process.env.PORT || 3000;
 var citykey = process.env.CITY_SECRET_KEY;
 var citytoken = process.env.CITY_USER_TOKEN;
 const crypto = require('crypto');
-const hmac = crypto.createHmac('sha256', citykey);
 
 
 app.get('/', function (req, res) {
@@ -18,6 +17,7 @@ app.listen(port, function () {
 });
 
 function signatureForRequest(verb, address, body){
+  var hmac = crypto.createHmac('sha256', citykey);
   var unixTime = Date.now();
   unixTime = 1474550892;
   var stringToSign = "" + unixTime + verb + address + body;
