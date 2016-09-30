@@ -1,9 +1,12 @@
 //hello
 var express = require('express');
+//var Buffer = require('buffer');
 var app = express();
 var port = process.env.PORT || 3000;
 var citykey = process.env.CITY_SECRET_KEY;
+var citykeybytes = Buffer.from(citykey);
 var citytoken = process.env.CITY_USER_TOKEN;
+//citytoken = Buffer.from(citytoken);
 const crypto = require('crypto');
 
 
@@ -17,9 +20,9 @@ app.listen(port, function () {
 });
 
 function signatureForRequest(verb, address, body){
-  var hmac = crypto.createHmac('sha256', citykey);
+  var hmac = crypto.createHmac('sha256', citykeybytes);
   var unixTime = Date.now();
-  unixTime = 1474550892;
+  unixTime = 1475205818;
   var stringToSign = "" + unixTime + verb + address + body;
   hmac.update(stringToSign);
   var signature = encodeURIComponent(hmac.digest('base64'));
