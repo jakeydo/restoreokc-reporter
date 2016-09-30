@@ -1,9 +1,6 @@
 {
   "name": "restoreokc-reporter",
   "version": "1.0.0",
-  "engines": {
-    "node": "6.6.0"
-  },
   "description": "Restore OKC Report Generator",
   "main": "index.js",
   "scripts": {
